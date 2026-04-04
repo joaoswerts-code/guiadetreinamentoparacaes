@@ -154,22 +154,22 @@
       top:50%;
       transform:translate(-50%, -50%);
       border:none;
-      background:rgba(255,255,255,.94);
+      background:rgba(255,255,255,.96);
       color:var(--primary-dark);
-      width:90px;
-      height:90px;
+      width:96px;
+      height:96px;
       border-radius:999px;
       font-size:13px;
       font-weight:800;
       font-family:'Inter', sans-serif;
       cursor:pointer;
-      box-shadow:0 14px 30px rgba(0,0,0,.18);
+      box-shadow:0 14px 30px rgba(0,0,0,.20);
       display:flex;
       flex-direction:column;
       align-items:center;
       justify-content:center;
       gap:5px;
-      z-index:3;
+      z-index:5;
       transition:.2s ease;
     }
 
@@ -254,6 +254,7 @@
       font-weight:900;
       cursor:pointer;
       transition:.2s ease;
+      text-align:center;
     }
 
     .btn-primary{
@@ -675,6 +676,7 @@
     .sticky-cta{
       position:fixed;
       left:50%;
+      transform:translateX(-50%) translateY(14px);
       bottom:14px;
       z-index:999;
       width:min(calc(100% - 24px), 420px);
@@ -686,7 +688,6 @@
       border-radius:22px;
       opacity:0;
       pointer-events:none;
-      transform:translateX(-50%) translateY(14px);
       transition:opacity .35s ease, transform .35s ease;
     }
 
@@ -708,8 +709,7 @@
       font-size:14px;
       border-radius:14px;
       box-shadow:0 12px 24px rgba(22,163,74,.20);
-      min-width:220px;
-      text-align:center;
+      min-width:100%;
     }
 
     @media (max-width: 980px){
@@ -790,8 +790,8 @@
       }
 
       .video-sound-btn{
-        width:74px;
-        height:74px;
+        width:78px;
+        height:78px;
         font-size:12px;
       }
 
@@ -817,19 +817,19 @@
 
         <div class="vsl-box">
           <div class="video-wrap">
-            <video id="vslVideo" autoplay muted loop playsinline preload="auto" poster="Guia completo de treinamento para cães.png">
+            <video id="vslVideo" muted playsinline preload="auto" poster="Guia completo de treinamento para cães.png">
               <source src="LP Guia do cap.mp4" type="video/mp4" />
               Seu navegador não suporta vídeo em HTML5.
             </video>
 
-            <button id="soundToggle" class="video-sound-btn" type="button">
+            <button id="soundToggle" class="video-sound-btn" type="button" aria-label="Ativar som do vídeo">
               <span class="video-sound-icon">🔊</span>
               <span>Ativar som</span>
             </button>
           </div>
 
           <div class="video-note">
-            Toque no botão para ouvir o áudio
+            Clique no botão para ouvir o áudio
           </div>
         </div>
 
@@ -906,4 +906,284 @@
         </div>
 
         <div class="quick-points">
-         
+          <div class="quick-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Treinamento passo a passo</strong>
+              <p>Saiba exatamente o que fazer em cada etapa do processo.</p>
+            </div>
+          </div>
+
+          <div class="quick-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Comandos e obediência</strong>
+              <p>Ensine seu cão a obedecer com mais facilidade no dia a dia.</p>
+            </div>
+          </div>
+
+          <div class="quick-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Menos estresse em casa</strong>
+              <p>Melhore a convivência e reduza bagunça, latidos e desobediência.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Por que esse guia funciona tão bem</h2>
+        <p>Um método simples, direto e eficiente para transformar o comportamento do seu cão.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">🐶</div>
+          <h3>Passo a passo</h3>
+          <p>Você aprende de forma clara como ensinar e corrigir comportamentos sem complicação.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Fácil de aplicar</h3>
+          <p>Mesmo quem nunca treinou um cão consegue seguir e colocar em prática.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Resultados rápidos</h3>
+          <p>Com consistência, você já pode notar melhorias no comportamento em pouco tempo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2>Quem compra, aprova</h2>
+        <p>Veja o que estão dizendo sobre o guia.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">
+            “Meu cachorro era muito agitado e não obedecia. Depois que comecei a aplicar o guia, percebi uma mudança enorme no comportamento dele.”
+          </div>
+          <div class="review-name">Rafael</div>
+          <div class="review-verified">
+            <span class="review-check">✓</span>
+            <span>Compra verificada</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">
+            “Gostei porque é bem prático e direto. Consegui ensinar comandos básicos sem dificuldade, mesmo sem experiência.”
+          </div>
+          <div class="review-name">Juliana</div>
+          <div class="review-verified">
+            <span class="review-check">✓</span>
+            <span>Compra verificada</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">
+            “Vale muito mais do que custa. O conteúdo é fácil de entender e me ajudou a melhorar bastante a convivência com meu cão.”
+          </div>
+          <div class="review-name">Marcos</div>
+          <div class="review-verified">
+            <span class="review-check">✓</span>
+            <span>Compra verificada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="final-card">
+        <h2>Comece hoje o treinamento do seu <span class="highlight">cão</span></h2>
+
+        <p>
+          Tenha acesso a um guia simples, prático e eficiente para ensinar comandos, corrigir comportamentos e melhorar a convivência com seu pet.
+        </p>
+
+        <div class="price-inline">
+          <div class="old-price">de R$ 97,00</div>
+          <div class="price-row">
+            <span class="price-currency">R$</span>
+            <span class="price-main">12</span>
+            <span class="price-cents">,49</span>
+          </div>
+        </div>
+
+        <a href="https://pay.cakto.com.br/5ju9gcx_834856" class="btn btn-primary pulse" style="max-width:420px; width:100%; margin:0 auto;">
+          QUERO COMPRAR AGORA
+        </a>
+
+        <div class="micro" style="margin-top:14px;">
+          Acesso liberado após a confirmação do pagamento
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:10px;">
+    <div class="container">
+      <div class="section-head">
+        <h2>Perguntas frequentes</h2>
+        <p>Sem enrolação.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item active">
+          <button class="faq-question" type="button">
+            <span>Como recebo o guia?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Após a confirmação do pagamento, o acesso ao material é liberado online.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>O acesso é imediato?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Sim. Assim que o pagamento for confirmado, você já poderá acessar o conteúdo.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Funciona para qualquer raça?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Sim. O guia foi pensado para ajudar tutores de cães de diferentes portes, raças e idades.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Preciso ter experiência para aplicar?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Não. O material foi feito para ser simples, direto e fácil de seguir, mesmo para iniciantes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 Guia de Treinamento para Cães • Todos os direitos reservados
+    </div>
+  </footer>
+
+  <div id="stickyOffer" class="sticky-cta">
+    <div class="sticky-wrap">
+      <a href="#oferta" class="btn btn-primary">
+        QUERO TREINAR MEU CÃO AGORA
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      const button = item.querySelector(".faq-question");
+      button.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+        faqItems.forEach(faq => faq.classList.remove("active"));
+        if (!isActive) {
+          item.classList.add("active");
+        }
+      });
+    });
+
+    const vslVideo = document.getElementById("vslVideo");
+    const soundToggle = document.getElementById("soundToggle");
+    const stickyOffer = document.getElementById("stickyOffer");
+    let stickyShown = false;
+    let stickyTimerStarted = false;
+
+    function showStickyOffer() {
+      if (!stickyShown && stickyOffer) {
+        stickyOffer.classList.add("visible");
+        stickyShown = true;
+      }
+    }
+
+    function startStickyTimer() {
+      if (stickyTimerStarted) return;
+      stickyTimerStarted = true;
+      setTimeout(showStickyOffer, 10000);
+    }
+
+    if (vslVideo) {
+      vslVideo.muted = true;
+      vslVideo.autoplay = true;
+      vslVideo.loop = true;
+
+      const tryPlayMuted = () => {
+        const playPromise = vslVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            startStickyTimer();
+          }).catch(() => {
+            startStickyTimer();
+          });
+        } else {
+          startStickyTimer();
+        }
+      };
+
+      tryPlayMuted();
+
+      vslVideo.addEventListener("play", startStickyTimer);
+      vslVideo.addEventListener("loadeddata", tryPlayMuted);
+    }
+
+    if (soundToggle && vslVideo) {
+      soundToggle.addEventListener("click", async () => {
+        try {
+          vslVideo.muted = false;
+          vslVideo.controls = true;
+          vslVideo.loop = false;
+          await vslVideo.play();
+          soundToggle.classList.add("hidden");
+        } catch (error) {
+          vslVideo.muted = false;
+          vslVideo.controls = true;
+          soundToggle.classList.add("hidden");
+        }
+      });
+
+      vslVideo.addEventListener("volumechange", () => {
+        if (!vslVideo.muted) {
+          soundToggle.classList.add("hidden");
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
