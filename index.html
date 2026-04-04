@@ -21,15 +21,11 @@
       --line:#d9efe0;
       --text:#142019;
       --muted:#5f7464;
-
-      /* 🔥 ALTERADO PARA DOURADO */
-      --primary:#d4af37;
-      --primary-dark:#b8962e;
-      --primary-soft:#fff7d6;
-
-      --green:#d4af37;
-      --green-soft:#fff7d6;
-
+      --primary:#16a34a;
+      --primary-dark:#15803d;
+      --primary-soft:#ecfdf5;
+      --green:#16a34a;
+      --green-soft:#ecfdf5;
       --yellow:#facc15;
       --shadow:0 18px 60px rgba(15,23,42,.08);
       --shadow-strong:0 20px 50px rgba(22,163,74,.16);
@@ -92,13 +88,1102 @@
         #fff;
     }
 
-    /* 👉 OBS: TODO RESTANTE DO SEU CSS CONTINUA EXATAMENTE IGUAL */
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1fr .95fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .hero-left{
+      text-align:center;
+    }
+
+    h1{
+      font-size:clamp(2.1rem, 4vw, 3.8rem);
+      line-height:1.04;
+      letter-spacing:-1.4px;
+      margin-bottom:18px;
+      max-width:760px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .highlight{
+      color:var(--primary);
+    }
+
+    .lead{
+      font-size:17px;
+      color:var(--muted);
+      margin:18px auto 20px;
+      max-width:620px;
+    }
+
+    .vsl-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:14px;
+      box-shadow:var(--shadow);
+      margin-bottom:20px;
+    }
+
+    .video-wrap{
+      width:100%;
+      max-width:420px;
+      margin:0 auto;
+      aspect-ratio:9 / 16;
+      border-radius:24px;
+      overflow:hidden;
+      background:#000;
+      box-shadow:0 16px 40px rgba(0,0,0,.18);
+      position:relative;
+    }
+
+    .video-wrap video{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      background:#000;
+    }
+
+    .video-sound-btn{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%, -50%);
+      border:none;
+      background:rgba(255,255,255,.96);
+      color:var(--primary-dark);
+      width:96px;
+      height:96px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      font-family:'Inter', sans-serif;
+      cursor:pointer;
+      box-shadow:0 14px 30px rgba(0,0,0,.20);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:5px;
+      z-index:5;
+      transition:.2s ease;
+    }
+
+    .video-sound-btn:hover{
+      transform:translate(-50%, -50%) scale(1.04);
+    }
+
+    .video-sound-btn.hidden{
+      opacity:0;
+      pointer-events:none;
+    }
+
+    .video-sound-icon{
+      font-size:24px;
+      line-height:1;
+    }
+
+    .video-note{
+      text-align:center;
+      margin-top:12px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .mini-benefits{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-bottom:22px;
+      text-align:left;
+    }
+
+    .mini-benefit{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      padding:13px 14px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+    }
+
+    .check{
+      width:24px;
+      height:24px;
+      min-width:24px;
+      border-radius:50%;
+      background:var(--green-soft);
+      color:var(--green);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+      font-weight:900;
+      margin-top:1px;
+    }
+
+    .mini-benefit span:last-child{
+      font-size:14px;
+      font-weight:700;
+      color:#18261f;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:12px;
+      justify-content:center;
+    }
+
+    .btn{
+      min-height:58px;
+      padding:0 26px;
+      border-radius:16px;
+      border:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:15px;
+      font-weight:900;
+      cursor:pointer;
+      transition:.2s ease;
+      text-align:center;
+    }
+
+    .btn-primary{
+      background:linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color:#fff;
+      box-shadow:0 14px 28px rgba(22,163,74,.22);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      filter:brightness(1.02);
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:#102019;
+      border:1px solid var(--line);
+    }
+
+    .micro{
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .offer-card{
+      background:linear-gradient(135deg, #f0fdf4 0%, #ffffff 40%, #f8fff9 100%);
+      border:2px solid #b7e5c4;
+      border-radius:30px;
+      padding:22px;
+      box-shadow:var(--shadow-strong);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .offer-card::before{
+      content:"OFERTA ESPECIAL";
+      position:absolute;
+      top:14px;
+      right:-40px;
+      background:var(--primary);
+      color:#fff;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.7px;
+      padding:8px 44px;
+      transform:rotate(35deg);
+      box-shadow:0 10px 24px rgba(22,163,74,.22);
+    }
+
+    .offer-image-top{
+      max-width:260px;
+      margin:0 auto 18px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:12px;
+      box-shadow:0 10px 24px rgba(15,23,42,.05);
+    }
+
+    .offer-image-top img{
+      width:100%;
+      border-radius:18px;
+    }
+
+    .offer-top{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:flex-start;
+      margin-bottom:18px;
+      flex-wrap:wrap;
+    }
+
+    .offer-top h3{
+      font-size:24px;
+      line-height:1.08;
+      letter-spacing:-.7px;
+      max-width:420px;
+    }
+
+    .offer-seal{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#fff;
+      border:1px solid #b7e5c4;
+      color:var(--primary-dark);
+      padding:10px 12px;
+      border-radius:14px;
+      font-size:12px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .price-box{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:18px;
+      align-items:center;
+      background:#fff;
+      border:1px solid #b7e5c4;
+      border-radius:24px;
+      padding:20px;
+      margin-bottom:20px;
+    }
+
+    .price-label{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+      color:var(--muted);
+      font-weight:800;
+      margin-bottom:6px;
+    }
+
+    .old-price{
+      color:#94a3b8;
+      text-decoration:line-through;
+      font-size:17px;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+
+    .price-row{
+      display:flex;
+      align-items:baseline;
+      gap:6px;
+      flex-wrap:wrap;
+      font-family:'Poppins', Arial, sans-serif;
+    }
+
+    .price-currency{
+      font-size:20px;
+      font-weight:700;
+      color:var(--primary-dark);
+      line-height:1;
+    }
+
+    .price-main{
+      font-size:54px;
+      line-height:1;
+      font-weight:800;
+      letter-spacing:-1px;
+      color:var(--primary-dark);
+    }
+
+    .price-cents{
+      font-size:20px;
+      font-weight:700;
+      color:var(--primary-dark);
+      line-height:1;
+    }
+
+    .installment{
+      margin-top:10px;
+      font-size:14px;
+      color:var(--primary-dark);
+      font-weight:800;
+    }
+
+    .price-side{
+      text-align:right;
+    }
+
+    .pulse{
+      animation:pulse 1.8s infinite;
+    }
+
+    @keyframes pulse{
+      0%{ transform:scale(1); }
+      50%{ transform:scale(1.03); }
+      100%{ transform:scale(1); }
+    }
+
+    .quick-points{
+      display:grid;
+      gap:12px;
+    }
+
+    .quick-item{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px 16px;
+    }
+
+    .quick-item strong{
+      display:block;
+      font-size:15px;
+      margin-bottom:2px;
+    }
+
+    .quick-item p{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .section-head{
+      max-width:720px;
+      margin:0 auto 28px;
+      text-align:center;
+    }
+
+    .section-head h2{
+      font-size:clamp(1.8rem, 3vw, 2.7rem);
+      line-height:1.08;
+      letter-spacing:-1px;
+      margin-bottom:10px;
+    }
+
+    .section-head p{
+      font-size:16px;
+      color:var(--muted);
+    }
+
+    .benefits{
+      background:var(--bg-soft);
+      border-top:1px solid #eef9f1;
+      border-bottom:1px solid #eef9f1;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 12px 28px rgba(15,23,42,.04);
+      text-align:center;
+    }
+
+    .card-icon{
+      width:58px;
+      height:58px;
+      border-radius:18px;
+      background:var(--primary-soft);
+      color:var(--primary-dark);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 14px;
+      font-size:24px;
+      font-weight:900;
+    }
+
+    .card h3{
+      font-size:19px;
+      margin-bottom:8px;
+      letter-spacing:-.4px;
+    }
+
+    .card p{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .reviews{
+      background:#fff;
+    }
+
+    .reviews-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:18px;
+    }
+
+    .review-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:22px;
+      box-shadow:0 12px 28px rgba(15,23,42,.04);
+    }
+
+    .stars{
+      color:var(--yellow);
+      font-size:20px;
+      letter-spacing:2px;
+      margin-bottom:12px;
+    }
+
+    .review-text{
+      font-size:15px;
+      color:#334155;
+      margin-bottom:14px;
+      min-height:96px;
+    }
+
+    .review-name{
+      font-size:15px;
+      font-weight:800;
+      margin-bottom:4px;
+    }
+
+    .review-verified{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .review-check{
+      width:20px;
+      height:20px;
+      border-radius:50%;
+      background:var(--green);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:12px;
+      font-weight:900;
+    }
+
+    .faq{
+      max-width:860px;
+      margin:0 auto;
+      display:grid;
+      gap:14px;
+    }
+
+    .faq-item{
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      background:#fff;
+    }
+
+    .faq-question{
+      width:100%;
+      border:none;
+      background:#fff;
+      padding:19px 20px;
+      font-size:15px;
+      font-weight:800;
+      text-align:left;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      cursor:pointer;
+      color:#102019;
+    }
+
+    .faq-answer{
+      display:none;
+      padding:0 20px 18px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .faq-item.active .faq-answer{
+      display:block;
+    }
+
+    .faq-toggle{
+      font-size:22px;
+      color:#64748b;
+      line-height:1;
+    }
+
+    .final-card{
+      max-width:900px;
+      margin:0 auto;
+      background:linear-gradient(180deg, #fff 0%, #f8fff9 100%);
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:34px 22px;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+
+    .final-card h2{
+      font-size:clamp(2rem, 3vw, 3rem);
+      line-height:1.05;
+      letter-spacing:-1px;
+      margin-bottom:12px;
+    }
+
+    .final-card p{
+      max-width:650px;
+      margin:0 auto 18px;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .price-inline{
+      display:flex;
+      justify-content:center;
+      align-items:baseline;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:20px;
+    }
+
+    .price-inline .old-price{
+      margin-right:10px;
+      margin-bottom:0;
+    }
+
+    .footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      padding:24px 0 88px;
+    }
+
+    .sticky-cta{
+      position:fixed;
+      left:50%;
+      transform:translateX(-50%) translateY(14px);
+      bottom:14px;
+      z-index:999;
+      width:min(calc(100% - 24px), 420px);
+      background:linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(240,253,244,.98) 100%);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(183,229,196,.95);
+      box-shadow:0 18px 40px rgba(15,23,42,.10);
+      padding:12px 14px;
+      border-radius:22px;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .35s ease, transform .35s ease;
+    }
+
+    .sticky-cta.visible{
+      opacity:1;
+      pointer-events:auto;
+      transform:translateX(-50%) translateY(0);
+    }
+
+    .sticky-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .sticky-cta .btn{
+      min-height:48px;
+      padding:0 22px;
+      font-size:14px;
+      border-radius:14px;
+      box-shadow:0 12px 24px rgba(22,163,74,.20);
+      min-width:100%;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid,
+      .grid-3,
+      .reviews-grid,
+      .price-box{
+        grid-template-columns:1fr;
+      }
+
+      .mini-benefits{
+        grid-template-columns:1fr;
+      }
+
+      .price-side{
+        text-align:left;
+      }
+
+      .video-wrap{
+        max-width:360px;
+      }
+
+      .offer-image-top{
+        max-width:220px;
+      }
+    }
+
+    @media (max-width: 640px){
+      section{
+        padding:42px 0;
+      }
+
+      .hero{
+        padding-top:18px;
+      }
+
+      .cta-row{
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .offer-card{
+        padding:18px;
+      }
+
+      .offer-card::before{
+        top:12px;
+        right:-46px;
+        font-size:10px;
+      }
+
+      .price-main{
+        font-size:44px;
+      }
+
+      .price-currency,
+      .price-cents{
+        font-size:18px;
+      }
+
+      .sticky-cta{
+        width:min(calc(100% - 16px), 340px);
+        bottom:8px;
+        padding:10px;
+        border-radius:18px;
+      }
+
+      .sticky-cta .btn{
+        min-width:100%;
+        min-height:44px;
+      }
+
+      .video-wrap{
+        max-width:100%;
+      }
+
+      .video-sound-btn{
+        width:78px;
+        height:78px;
+        font-size:12px;
+      }
+
+      .video-sound-icon{
+        font-size:20px;
+      }
+    }
   </style>
 </head>
-
 <body>
 
-  <!-- 👉 TODO SEU HTML ORIGINAL CONTINUA IGUAL AQUI -->
-  
+  <div class="topbar">
+    Oferta especial • acesso imediato ao guia digital
+  </div>
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-left">
+        <h1>
+          Ensine seu cão de forma simples com o <span class="highlight">Guia de Treinamento para Cães</span>
+        </h1>
+
+        <div class="vsl-box">
+          <div class="video-wrap">
+            <video id="vslVideo" muted playsinline preload="auto" poster="Guia completo de treinamento para cães.png">
+              <source src="LP Guia do cap.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo em HTML5.
+            </video>
+
+            <button id="soundToggle" class="video-sound-btn" type="button" aria-label="Ativar som do vídeo">
+              <span class="video-sound-icon">🔊</span>
+              <span>Ativar som</span>
+            </button>
+          </div>
+
+          <div class="video-note">
+            Clique no botão para ouvir o áudio
+          </div>
+        </div>
+
+        <p class="lead">
+          Aprenda passo a passo como corrigir maus hábitos, ensinar comandos e melhorar a convivência com seu cão sem depender de adestrador.
+        </p>
+
+        <div class="mini-benefits">
+          <div class="mini-benefit">
+            <div class="check">✓</div>
+            <span>Ensine comandos básicos e avançados</span>
+          </div>
+
+          <div class="mini-benefit">
+            <div class="check">✓</div>
+            <span>Corrija comportamentos indesejados</span>
+          </div>
+
+          <div class="mini-benefit">
+            <div class="check">✓</div>
+            <span>Método simples e fácil de aplicar</span>
+          </div>
+
+          <div class="mini-benefit">
+            <div class="check">✓</div>
+            <span>Funciona para diferentes raças e idades</span>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a href="https://pay.cakto.com.br/5ju9gcx_834856" class="btn btn-primary pulse">
+            QUERO TREINAR MEU CÃO AGORA
+          </a>
+
+          <a href="#oferta" class="btn btn-secondary">
+            VER OFERTA
+          </a>
+        </div>
+
+        <div class="micro">
+          Compra online • acesso liberado logo após a confirmação
+        </div>
+      </div>
+
+      <div id="oferta" class="offer-card">
+        <div class="offer-image-top">
+          <img src="Guia completo de treinamento para cães.png" alt="Guia de Treinamento para Cães">
+        </div>
+
+        <div class="offer-top">
+          <h3>Leve agora o Guia Completo de Treinamento Canino</h3>
+          <div class="offer-seal">✓ Oferta ativa agora</div>
+        </div>
+
+        <div class="price-box">
+          <div>
+            <div class="price-label">Oferta promocional</div>
+            <div class="old-price">de R$ 97,00</div>
+
+            <div class="price-row">
+              <span class="price-currency">R$</span>
+              <span class="price-main">12</span>
+              <span class="price-cents">,49</span>
+            </div>
+
+            <div class="installment">Pagamento único • acesso imediato</div>
+          </div>
+
+          <div class="price-side">
+            <a href="https://pay.cakto.com.br/5ju9gcx_834856" class="btn btn-primary pulse">
+              COMPRAR AGORA
+            </a>
+          </div>
+        </div>
+
+        <div class="quick-points">
+          <div class="quick-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Treinamento passo a passo</strong>
+              <p>Saiba exatamente o que fazer em cada etapa do processo.</p>
+            </div>
+          </div>
+
+          <div class="quick-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Comandos e obediência</strong>
+              <p>Ensine seu cão a obedecer com mais facilidade no dia a dia.</p>
+            </div>
+          </div>
+
+          <div class="quick-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Menos estresse em casa</strong>
+              <p>Melhore a convivência e reduza bagunça, latidos e desobediência.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Por que esse guia funciona tão bem</h2>
+        <p>Um método simples, direto e eficiente para transformar o comportamento do seu cão.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">🐶</div>
+          <h3>Passo a passo</h3>
+          <p>Você aprende de forma clara como ensinar e corrigir comportamentos sem complicação.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Fácil de aplicar</h3>
+          <p>Mesmo quem nunca treinou um cão consegue seguir e colocar em prática.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Resultados rápidos</h3>
+          <p>Com consistência, você já pode notar melhorias no comportamento em pouco tempo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2>Quem compra, aprova</h2>
+        <p>Veja o que estão dizendo sobre o guia.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">
+            “Meu cachorro era muito agitado e não obedecia. Depois que comecei a aplicar o guia, percebi uma mudança enorme no comportamento dele.”
+          </div>
+          <div class="review-name">Rafael</div>
+          <div class="review-verified">
+            <span class="review-check">✓</span>
+            <span>Compra verificada</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">
+            “Gostei porque é bem prático e direto. Consegui ensinar comandos básicos sem dificuldade, mesmo sem experiência.”
+          </div>
+          <div class="review-name">Juliana</div>
+          <div class="review-verified">
+            <span class="review-check">✓</span>
+            <span>Compra verificada</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">
+            “Vale muito mais do que custa. O conteúdo é fácil de entender e me ajudou a melhorar bastante a convivência com meu cão.”
+          </div>
+          <div class="review-name">Marcos</div>
+          <div class="review-verified">
+            <span class="review-check">✓</span>
+            <span>Compra verificada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="final-card">
+        <h2>Comece hoje o treinamento do seu <span class="highlight">cão</span></h2>
+
+        <p>
+          Tenha acesso a um guia simples, prático e eficiente para ensinar comandos, corrigir comportamentos e melhorar a convivência com seu pet.
+        </p>
+
+        <div class="price-inline">
+          <div class="old-price">de R$ 97,00</div>
+          <div class="price-row">
+            <span class="price-currency">R$</span>
+            <span class="price-main">12</span>
+            <span class="price-cents">,49</span>
+          </div>
+        </div>
+
+        <a href="https://pay.cakto.com.br/5ju9gcx_834856" class="btn btn-primary pulse" style="max-width:420px; width:100%; margin:0 auto;">
+          QUERO COMPRAR AGORA
+        </a>
+
+        <div class="micro" style="margin-top:14px;">
+          Acesso liberado após a confirmação do pagamento
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:10px;">
+    <div class="container">
+      <div class="section-head">
+        <h2>Perguntas frequentes</h2>
+        <p>Sem enrolação.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item active">
+          <button class="faq-question" type="button">
+            <span>Como recebo o guia?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Após a confirmação do pagamento, o acesso ao material é liberado online.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>O acesso é imediato?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Sim. Assim que o pagamento for confirmado, você já poderá acessar o conteúdo.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Funciona para qualquer raça?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Sim. O guia foi pensado para ajudar tutores de cães de diferentes portes, raças e idades.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Preciso ter experiência para aplicar?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Não. O material foi feito para ser simples, direto e fácil de seguir, mesmo para iniciantes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 Guia de Treinamento para Cães • Todos os direitos reservados
+    </div>
+  </footer>
+
+  <div id="stickyOffer" class="sticky-cta">
+    <div class="sticky-wrap">
+      <a href="#oferta" class="btn btn-primary">
+        QUERO TREINAR MEU CÃO AGORA
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      const button = item.querySelector(".faq-question");
+      button.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+        faqItems.forEach(faq => faq.classList.remove("active"));
+        if (!isActive) {
+          item.classList.add("active");
+        }
+      });
+    });
+
+    const vslVideo = document.getElementById("vslVideo");
+    const soundToggle = document.getElementById("soundToggle");
+    const stickyOffer = document.getElementById("stickyOffer");
+    let stickyShown = false;
+    let stickyTimerStarted = false;
+
+    function showStickyOffer() {
+      if (!stickyShown && stickyOffer) {
+        stickyOffer.classList.add("visible");
+        stickyShown = true;
+      }
+    }
+
+    function startStickyTimer() {
+      if (stickyTimerStarted) return;
+      stickyTimerStarted = true;
+      setTimeout(showStickyOffer, 95000);
+    }
+
+    if (vslVideo) {
+      vslVideo.muted = true;
+      vslVideo.autoplay = true;
+      vslVideo.loop = true;
+
+      const tryPlayMuted = () => {
+        const playPromise = vslVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            startStickyTimer();
+          }).catch(() => {
+            startStickyTimer();
+          });
+        } else {
+          startStickyTimer();
+        }
+      };
+
+      tryPlayMuted();
+
+      vslVideo.addEventListener("play", startStickyTimer);
+      vslVideo.addEventListener("loadeddata", tryPlayMuted);
+    }
+
+    if (soundToggle && vslVideo) {
+      soundToggle.addEventListener("click", async () => {
+        try {
+          vslVideo.muted = false;
+          vslVideo.controls = true;
+          vslVideo.loop = false;
+          await vslVideo.play();
+          soundToggle.classList.add("hidden");
+        } catch (error) {
+          vslVideo.muted = false;
+          vslVideo.controls = true;
+          soundToggle.classList.add("hidden");
+        }
+      });
+
+      vslVideo.addEventListener("volumechange", () => {
+        if (!vslVideo.muted) {
+          soundToggle.classList.add("hidden");
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>
